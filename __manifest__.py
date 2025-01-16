@@ -1,10 +1,10 @@
 {
     'name': 'Sport ESI',
     'version': '1.0',
-    'category': 'Services',
-    'summary': 'TP PGI Sport ESI',
+    'category': 'Sport',
+    'summary': 'TP PGI - Sport ESI',
     'description': """
-        TP EXAM 2 - SPORT ESI-  module qui permet de gérer l'affectation des séances dans la salle de sport de l'école
+        TP EXAM 2 - SPORT ESI-  module qui permet de gérer l'affectation des séances dans la salle de sport de l'école aux sportifs
     """,
     'author': 'Achraf Abdelkebir SIT2',
     'website': 'https://esi.dz',
@@ -14,7 +14,6 @@
         'security\sport_security.xml',
         'security\ir.model.access.csv',
         'views\sport_views.xml',  
-        
     ],
     'demo': [
         'demo/sport_demo.xml',

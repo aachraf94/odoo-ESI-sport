@@ -9,6 +9,3 @@ class sportif(models.Model):
     categorie = fields.Char(string="Categorie du sportif")
     
     seance_id = fields.Many2many('calendar.event', ondelete='cascade', string="Seances")
-    
-
-    
