@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_sport_root" 
+        name="Abdelkebir_SportESI"
+        sequence="10"/>
+
+    <menuitem id="menu_sportESI_main" 
+        name="SportESI" 
+        parent="menu_sport_root" 
+        sequence="10"/>
+
+
+
+
+
+
+
+
+    <!-- Sportif -->
+    <record model="ir.ui.view" id="Sportif_form_view">
+        <field name="name">sportif.form</field>
+        <field name="model">sport.sportif</field>
+        <field name="arch" type="xml">
+            <form string="sportif Form">
+                <sheet>
+                    <group string="GENERAL">
+                        <field name="matricule" string="idSportif"/>
+                        <field name="nom" />
+
+                    </group>
+
+                    <group string="SEANCE">
+                        <field name="categorie" />
+                        <field name="seance_id" />
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- override the automatically generated list view for sportif -->
+    <record model="ir.ui.view" id="sportif_tree_view">
+        <field name="name">sportif.tree</field>
+        <field name="model">sport.sportif</field>
+        <field name="arch" type="xml">
+            <tree string="sportif Tree">
+                        <field name="matricule" />
+                        <field name="nom" />
+                        <field name="categorie" />
+                        <field name="seance_id" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="sportif_search_view">
+      <field name="name">sportif.search</field>
+      <field name="model">sport.sportif</field>
+      <field name="arch" type="xml">
+         <search>
+            <field name="nom" />
+         </search>
+      </field>
+   </record>
+
+
+   <!-- window action -->
+   <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+   <record model="ir.actions.act_window" id="sportif_list_action">
+      <field name="name">Sportifs</field>
+      <field name="res_model">sport.sportif</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+         <p class="o_view_nocontent_smiling_face">Create the first sportif</p>
+      </field>
+   </record>
+
+    <!-- Sportif Menu -->
+    <menuitem id="menu_sportif_list" 
+        name="Sportifs" 
+        parent="menu_sportESI_main"
+        action="sportif_list_action"
+        sequence="10"/>
+
+
+<!-- _____________________________________________________________________________________________________ -->        
+
+    <!-- Seance -->
+   <record model="ir.actions.act_window" id="seance_list_action">
+      <field name="name">Seances</field>
+      <field name="res_model">calendar.event</field>
+      <field name="view_mode">tree,form,</field>
+   </record>
+
+
+
+
+    <!-- Seance Menu -->
+    <menuitem id="menu_seance_list" 
+        name="Seances" 
+        parent="menu_sportESI_main" 
+        action="seance_list_action"
+        sequence="10"/>
+
+
+
+</odoo>
