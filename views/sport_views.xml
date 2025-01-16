@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
    <!-- Main Menu -->
-   <menuitem id="menu_sport_root" name="Abdelkebir_SportESI" sequence="10" />
+   <menuitem id="menu_sport_root" name="Sport ESI" sequence="10" />
    
    
-   <menuitem id="menu_sportESI_main" name="SportESI" parent="menu_sport_root" sequence="10" />
+   <menuitem id="menu_sportESI_main" name="Sport ESI" parent="menu_sport_root" sequence="10" />
    
    <!-- Sportif -->
    <record model="ir.ui.view" id="Sportif_form_view">
